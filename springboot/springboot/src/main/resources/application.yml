@@ -1,0 +1,43 @@
+server:
+  port:
+       9091
+
+spring:
+  datasource:
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://1.116.163.212:3306/shujuku?serverTimezone=GMT%2b8
+    # url: jdbc:mysql://localhost:3306/shujuku?serverTimezone=GMT%2b8
+   username: root
+   password: qwer
+
+  mail:
+  #    protocol: smtps
+    protocol: smtps
+  # 配置 SMTP 服务器地址
+    host: smtp.163.com
+  # 发送者邮箱
+  #    username: xqnode@163.com
+    username: lvshuai6666666@163.com
+  # 配置密码，注意不是真正的密码，而是刚刚申请到的授权码
+    password: DBETGFVOALNIYGRP
+  # 端口号465或587
+  #    port: 465
+    port: 587
+  # 默认的邮件编码为UTF-8
+    default-encoding: UTF-8
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #扫描所有mybatis的xml文件
+#configuration:
+#  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+  upload:
+    path: /files/
+assignments:
+  upload:
+    path: /assignments/
+
